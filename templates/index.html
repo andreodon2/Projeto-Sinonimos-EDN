@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinônimos</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
 </head>
 <body>
     <div id="busca">
         <h2>Sinônimos</h2>
-        <form action="">
-            <input type="text" placeholder="Digite uma palavra para encontrar o seu sinônimo">
+        <form action="/" method="post">
+            <input type="text" name="palavra" placeholder="Digite uma palavra para encontrar o seu sinônimo" value="{{ palavra_buscada if palavra_buscada }}">
+            <input type="submit" value="Buscar">
         </form>
-        <input type="button" value="Buscar">
     </div>
     <div id="resultado">
-        <p></p>
-        <p></p>
-        <p></p>
+        {% if sinonimos %}
+            <h3>Resultados para "{{ palavra_buscada }}":</h3>
+            {% if sinonimos[0] == "Não foi possível buscar os sinônimos. Tente novamente mais tarde." or sinonimos[0] == "Por favor, digite uma palavra para buscar." %}
+                <p>{{ sinonimos[0] }}</p>
+            {% elif sinonimos %}
+                <ul>
+                    {% for sinonimo in sinonimos %}
+                        <li>{{ sinonimo }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhum sinônimo encontrado para "{{ palavra_buscada }}".</p>
+            {% endif %}
+        {% endif %}
     </div>
 </body>
 </html>
