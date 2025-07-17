@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palavrix</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
-    <link rel="icon" type="image/png" href="icon.png"> 
+    <link rel="icon" type="image/png" href="imagens/icon.png"> 
     
     <style>
         body {
@@ -13,13 +13,14 @@
             text-align: center;
             margin-top: 50px;
             color: #DCDCDC;
-            background-color: #363636;
+            background-image: url('imagens/fundo.png'); 
+
         }
         
     </style>
 </head>
 <body>
-     <img src=logo.png alt="Palavrix" class="logo-cabecalho">
+     <img src=imagens/logo.png alt="Palavrix" class="logo-cabecalho">
     <div id="busca">
         <h2>Sinônimos</h2>
         <form action="/" method="post">
