@@ -1,0 +1,69 @@
+* {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    padding: 2em 0 .1em 0;
+}
+
+h3 {
+    text-align: center;
+    padding: .1em 0 3em 0;
+}
+
+/* Fim Título */
+
+/* Área de busca */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-buscador {
+    width: 50%;
+    height: 40px;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+.botao {
+    width: 100px;
+    height: 43px;
+    background-color: rgb(113, 240, 113);
+    font-weight: bolder;
+}
+
+.botao:hover {
+    background-color: green;
+    font-weight: bolder;
+    color: #fff;
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.resultado {
+    width: 59%;
+    margin: 30px auto;
+}
+
+/* Fim Resultado */
+
+/* Rodapé */
+
+footer {
+    background-color: #000;
+    clear: both;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    height: 150px;
+}
