@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinônimos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <meta charset="UTF-8" />
+    <title>Palavrix - Buscador de Sinônimos</title>
+    <link rel="stylesheet" href="../static/css/estilo.css">
 </head>
 <body>
-    <div id="busca">
-        <h2>Sinônimos</h2>
-        <form action="/" method="post">
-            <input type="text" name="palavra" placeholder="Digite uma palavra para encontrar o seu sinônimo" value="{{ palavra_buscada if palavra_buscada }}">
-            <input type="submit" value="Buscar">
-        </form>
-    </div>
-    <div id="resultado">
-        {% if sinonimos %}
-            <h3>Resultados para "{{ palavra_buscada }}":</h3>
-            {% if sinonimos[0] == "Não foi possível buscar os sinônimos. Tente novamente mais tarde." or sinonimos[0] == "Por favor, digite uma palavra para buscar." %}
-                <p>{{ sinonimos[0] }}</p>
-            {% elif sinonimos %}
+    <h1 class="titulo">Palavrix</h1>
+    <h3>Encontre palavras similares para enriquecer sua escrita!</h3>
+    <form class="buscador" method="POST" action="/">
+        <input class="botao-buscador" type="text" name="palavra" value="{{ palavra }}" placeholder="Digite uma palavra" />
+        <input class="botao" type="submit" value="Buscar" />
+    </form>
+
+    <div class="resultado">
+        {% if palavra %}
+            <h2>Sinônimos para "{{ palavra }}":</h2>
+            {% if sinonimos %}
                 <ul>
                     {% for s in sinonimos %}
                         <li>{{ s }}</li>
