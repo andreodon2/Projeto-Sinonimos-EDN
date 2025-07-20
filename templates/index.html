@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="../static/css/estilo.css">
 </head>
 <body>
+    <header class="cabecalho">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projeto.html">Sobre o projeto Palavrix</a></li>
+            <li><a href="quem-somos-nos.html">Quem Somos Nós</a></li>
+        </ul>
+    </header>
     <h1 class="titulo">Palavrix</h1>
     <h3>Encontre palavras similares para enriquecer sua escrita!</h3>
     <form class="buscador" method="POST" action="/">
@@ -26,8 +33,11 @@
                 <p>Nenhum sinônimo encontrado.</p>
             {% endif %}
         {% endif %}
+    </div>
     <footer>
-        <p>Todos os direitos reservados&copy; 2025
+        <p class="acima">Trabalho de Conclusão de Curso - Grupo 3</p>
+        <p>Escola da Nuvem</p>
+        <p class="abaixo">Todos os direitos reservados&copy; 2025
     </footer>
 </body>
 </html>

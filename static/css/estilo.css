@@ -2,6 +2,37 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* Header */
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    list-style-type: none;
+    float: left;
+    background-color: rgb(113, 240, 113);
+    padding: 10px 15px;
+    margin: 0 5px 0 5px;
+}
+
+.menu li:hover {
+    background-color: green;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.menu a:hover {
+    color: #fff;
+    font-weight: bolder;
+}
+/* Fim Header */
+
 /* Título */
 h1 {
     text-align: center;
@@ -62,8 +93,21 @@ footer {
     clear: both;
 }
 
-footer p {
-    text-align: center;
-    color: #fff;
+/* footer {
     height: 150px;
+} */
+
+footer p {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acima {
+    padding-top: 50px;
+}
+
+.abaixo {
+    padding-bottom: 50px;
 }
