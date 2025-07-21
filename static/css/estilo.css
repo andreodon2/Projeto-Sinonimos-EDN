@@ -111,3 +111,96 @@ footer p {
 .abaixo {
     padding-bottom: 50px;
 }
+
+/* Página quem somos nós */
+
+/* Seu CSS existente para body, container, etc. */
+
+/* Estilos para a seção da equipe */
+#equipe {
+    display: flex; /* Para alinhar as fotos lado a lado, se tiver mais de uma */
+    flex-wrap: wrap; /* Para quebrar linha se não couberem */
+    gap: 20px; /* Espaço entre os membros */
+    justify-content: center; /* Centraliza os membros */
+    margin-top: 30px;
+}
+
+.membro-equipe {
+    position: relative; /* Importante para posicionar o pop-up */
+    width: 200px; /* Largura da área do membro */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.membro-equipe:hover {
+    transform: translateY(-5px); /* Efeito visual ao passar o mouse */
+}
+
+.foto-integrante {
+    width: 150px; /* Tamanho da foto */
+    height: 150px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    cursor: pointer; /* Indica que a imagem é clicável */
+    border: 3px solid #007bff; /* Borda da foto */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.foto-integrante:hover {
+    border-color: #0056b3; /* Cor da borda ao passar o mouse */
+}
+
+/* Estilos para o pop-up da biografia */
+.bio-popup {
+    display: none; /* ESTE É CRUCIAL: Inicialmente oculto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    /* Adicione estas propriedades para o alinhamento centralizado */
+    display: flex; /* Transforma em flex container para centralizar conteúdo */
+    flex-direction: column; /* Organiza itens em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center; /* Garante que o texto dentro seja centralizado */
+}
+
+.bio-popup h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.bio-popup p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.fechar-bio {
+    background-color: #dc3545; /* Cor vermelha para o botão fechar */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.fechar-bio:hover {
+    background-color: #c82333;
+}
