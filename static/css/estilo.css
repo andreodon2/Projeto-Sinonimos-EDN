@@ -3,7 +3,11 @@
 }
 
 body {
-    background-image: url(/static/imagens/fundo.png);
+    background-image: url('../imagens/fundo.png'); /* CORRIGIDO: caminho relativo ao CSS */
+    background-size: cover; /* Adicionei para melhor visualização */
+    background-position: center center; /* Adicionei para melhor visualização */
+    background-repeat: no-repeat; /* Adicionei para melhor visualização */
+    background-attachment: fixed; /* Opcional: para que o fundo não role */
 }
 
 main {
@@ -144,8 +148,7 @@ footer p {
 }
 
 .membro-equipe {
-    position: relative; /* Importante para posicionar o pop-up */
-    width: 200px; /* Largura da área do membro */
+    width: 273px; /* Largura da área do membro */
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
@@ -176,9 +179,6 @@ footer p {
 /* Estilos para o pop-up da biografia */
 .bio-popup {
     display: none; /* ESTE É CRUCIAL: Inicialmente oculto */
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -188,24 +188,49 @@ footer p {
     box-sizing: border-box;
     z-index: 10;
     /* Adicione estas propriedades para o alinhamento centralizado */
+    text-align: left; /* Garante que o texto dentro seja centralizado */
+    margin-top: 10px;
+    word-wrap: break-word;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.bio-popup.ativo {
     display: flex; /* Transforma em flex container para centralizar conteúdo */
     flex-direction: column; /* Organiza itens em coluna */
     justify-content: center; /* Centraliza verticalmente o conteúdo */
     align-items: center; /* Centraliza horizontalmente o conteúdo */
-    text-align: center; /* Garante que o texto dentro seja centralizado */
+    padding: 20px;
 }
 
 .bio-popup h3 {
     margin-top: 0;
     color: #333;
     font-size: 1.2em;
+    margin-bottom: -57px;
 }
 
 .bio-popup p {
     font-size: 0.9em;
     color: #555;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.bio-popup ul {
+    list-style-type: disc; /* Tipo de marcador (pode ser circle, square, none) */
+    text-align: left; /* Alinha os itens da lista à esquerda */
+    margin: 10px auto; /* Centraliza a lista na caixa se a largura for menor que 100% */
+    padding-left: 20px; /* Adiciona padding para os marcadores */
+    max-width: 90%; /* Limita a largura da lista para não encostar nas bordas */
+}
+
+.bio-popup li {
+    margin-bottom: 5px; /* Espaço entre os itens da lista */
+    color: #444;
+    line-height: 1.3;
 }
 
 .fechar-bio {

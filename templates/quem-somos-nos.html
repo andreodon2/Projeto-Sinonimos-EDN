@@ -21,6 +21,27 @@
             <img class="foto-integrante" src="{{ url_for('static', filename='imagens/andre.jpg') }}" alt="Foto do André" onclick="toggleBio('bioAndre')">
                 <div class="bio-popup" id="bioAndre">
                     <h3>André Gabriel</h3>
+                    <p><strong>Nome: André Gabriel</strong></p>
+                    <ul>
+                        <li>Cidade: Belém/PA
+                        <li>Experiência: Com início de carreira desde 2008, prestando serviços freelancers a clientes, desde residências até empresas. Em ambientes corporativos
+                    </ul>
+                    <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
+                </div>
+                <!--Demais integrantes para colocar-->
+                <div class="bio-popup" id="bioEstefane">
+                    <h3>André Gabriel</h3>
+                    <p>Olá! Meu nome é André Gabriel, sou um estudante de programação apaixonado por tecnologia e inovação. Este projeto de site de sinônimos é parte do meu aprendizado e dedicação em construir ferramentas úteis.</p>
+                    <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
+                </div>
+                <div class="bio-popup" id="bioGabriel">
+                    <p>
+                        Olá! Meu nome é André Gabriel, sou um estudante de programação apaixonado por tecnologia e inovação. Este projeto de site de sinônimos é parte do meu aprendizado e dedicação em construir ferramentas úteis.
+                    </p>
+                    <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
+                </div>
+                <div class="bio-popup" id="bioLivea">
+                    <h3>André Gabriel</h3>
                     <p>Olá! Meu nome é André Gabriel, sou um estudante de programação apaixonado por tecnologia e inovação. Este projeto de site de sinônimos é parte do meu aprendizado e dedicação em construir ferramentas úteis.</p>
                     <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
                 </div>
@@ -32,12 +53,8 @@
         </footer>
         <script>
             function toggleBio(id) {
-                var bio = document.getElementById(id);
-                if (bio.style.display === "block") {
-                    bio.style.display = "none";
-                } else {
-                    bio.style.display = "block";
-                }
+            var bio = document.getElementById(id);
+            bio.classList.toggle('ativo'); // Alterna a classe 'ativo'
             }
         </script>
     </main>
