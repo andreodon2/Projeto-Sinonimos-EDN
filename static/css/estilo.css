@@ -2,6 +2,16 @@
     font-family: 'Arial', sans-serif;
 }
 
+body {
+    background-image: url(/static/imagens/fundo.png);
+}
+
+main {
+    width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+}
+
 /* Header */
 .cabecalho {
     display: flex;
@@ -36,12 +46,20 @@
 /* Título */
 h1 {
     text-align: center;
-    padding: 2em 0 .1em 0;
 }
 
 h3 {
     text-align: center;
     padding: .1em 0 3em 0;
+}
+
+.logo {
+    margin: 0 auto;
+    padding: 2em 0 .1em 0;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Fim Título */

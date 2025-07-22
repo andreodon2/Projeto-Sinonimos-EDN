@@ -6,38 +6,40 @@
     <link rel="stylesheet" href="../static/css/estilo.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <ul class="menu">
-            <li><a href="/">Início</a></li>
-            <li><a href="/about-project/">Sobre o projeto Palavrix</a></li>
-            <li><a href="/about-we/">Quem Somos Nós</a></li>
-        </ul>
-    </header>
-    <h1>Quem somos nós?</h1>
-    <h2>Conheça os integrantes da equipe</h2>
-    <h3>Clique na foto para saber mais</h3>
-    <div class="membro-equipe">
-        <img class="foto-integrante" src="{{ url_for('static', filename='imagens/andre.jpg') }}" alt="Foto do André" onclick="toggleBio('bioAndre')">
-            <div class="bio-popup" id="bioAndre">
-                <h3>André Gabriel</h3>
-                <p>Olá! Meu nome é André Gabriel, sou um estudante de programação apaixonado por tecnologia e inovação. Este projeto de site de sinônimos é parte do meu aprendizado e dedicação em construir ferramentas úteis.</p>
-                <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
-            </div>
-    </div>
-    <footer>
-        <p class="acima">Trabalho de Conclusão de Curso - Grupo 3</p>
-        <p>Escola da Nuvem</p>
-        <p class="abaixo">Todos os direitos reservados&copy; 2025
-    </footer>
-    <script>
-        function toggleBio(id) {
-            var bio = document.getElementById(id);
-            if (bio.style.display === "block") {
-                bio.style.display = "none";
-            } else {
-                bio.style.display = "block";
+    <main>
+        <header class="cabecalho">
+            <ul class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="/about-project/">Sobre o projeto Palavrix</a></li>
+                <li><a href="/about-we/">Quem Somos Nós</a></li>
+            </ul>
+        </header>
+        <h1>Quem somos nós?</h1>
+        <h2>Conheça os integrantes da equipe</h2>
+        <h3>Clique na foto para saber mais</h3>
+        <div class="membro-equipe">
+            <img class="foto-integrante" src="{{ url_for('static', filename='imagens/andre.jpg') }}" alt="Foto do André" onclick="toggleBio('bioAndre')">
+                <div class="bio-popup" id="bioAndre">
+                    <h3>André Gabriel</h3>
+                    <p>Olá! Meu nome é André Gabriel, sou um estudante de programação apaixonado por tecnologia e inovação. Este projeto de site de sinônimos é parte do meu aprendizado e dedicação em construir ferramentas úteis.</p>
+                    <button class="fechar-bio" onclick="toggleBio('bioAndre')">Fechar</button>
+                </div>
+        </div>
+        <footer>
+            <p class="acima">Trabalho de Conclusão de Curso - Grupo 3</p>
+            <p>Escola da Nuvem</p>
+            <p class="abaixo">Todos os direitos reservados&copy; 2025
+        </footer>
+        <script>
+            function toggleBio(id) {
+                var bio = document.getElementById(id);
+                if (bio.style.display === "block") {
+                    bio.style.display = "none";
+                } else {
+                    bio.style.display = "block";
+                }
             }
-        }
-    </script>
+        </script>
+    </main>
 </body>
 </html>
